@@ -1,5 +1,6 @@
 ---
 # the default layout is 'page'
+title: Tasks
 icon: fas fa-tasks
 order: 5
 ---
