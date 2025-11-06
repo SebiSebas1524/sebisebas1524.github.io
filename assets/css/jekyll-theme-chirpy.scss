@@ -1,0 +1,249 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main' {%- if jekyll.environment == 'production' -%}.bundle{%- endif -%};
+
+/* ===== COLOR PALETTE VARIABLES ===== */
+$primary-purple: #4a2847;
+$medium-purple: #6B3F69;
+$light-purple: #8D5F8C;
+$dusty-rose: #c9a5bb;
+
+/* Gradients - MAUVE & DUSTY ROSE FOCUSED */
+$gradient-main: linear-gradient(135deg, #4a2847 0%, #6B3F69 25%, #8D5F8C 50%, #6B3F69 75%, #4a2847 100%);
+$gradient-subtle: linear-gradient(90deg, #6B3F69, #8D5F8C);
+$gradient-accent: linear-gradient(45deg, #c9a5bb, #d4b4c6, #bea0b3);
+
+/* ===== DARK THEME COLOR SCHEME ===== */
+html:not([data-mode]),
+html[data-mode=dark] {
+  /* Framework Colors */
+  --main-bg: #4a2847;
+  --mask-bg: #6B3F69;
+  --main-border-color: #8D5F8C;
+  
+  /* Text Colors */
+  --text-color: #f5f1ed;
+  --text-muted-color: #a89aae;
+  --text-muted-highlight-color: #f5f1ed;
+  --heading-color: #f5f1ed;
+  --label-color: #a89aae;
+  
+  /* Links & Quotes */
+  --blockquote-border-color: #c9a5bb;
+  --blockquote-text-color: #a89aae;
+  --link-color: #c9a5bb;
+  --link-underline-color: #d4b4c6;
+  
+  /* Buttons */
+  --button-bg: #6B3F69;
+  --btn-border-color: #8D5F8C;
+  --btn-backtotop-color: #f5f1ed;
+  --btn-backtotop-border-color: #8D5F8C;
+  --btn-box-shadow: rgba(201, 165, 187, 0.2);
+  
+  /* Cards & Headers */
+  --card-header-bg: #6B3F69;
+  --card-bg: #4a2847;
+  
+  /* Checkboxes */
+  --checkbox-color: #8D5F8C;
+  --checkbox-checked-color: #c9a5bb;
+  
+  /* Images & Gradients */
+  --img-bg: radial-gradient(circle, #4a2847 0%, #6B3F69 100%);
+  --shimmer-bg: linear-gradient(90deg, rgba(201, 165, 187, 0) 0%, rgba(201, 165, 187, 0.3) 50%, rgba(201, 165, 187, 0) 100%);
+  
+  /* Site Title & Branding */
+  --site-title-color: #f5f1ed;
+  --site-subtitle-color: #a89aae;
+  
+  /* Sidebar */
+  --sidebar-bg: #6B3F69;
+  --sidebar-border-color: #8D5F8C;
+  --sidebar-muted-color: #a89aae;
+  --sidebar-active-color: #f5f1ed;
+  --sidebar-hover-bg: #4a2847;
+  --sidebar-btn-bg: #4a2847;
+  --sidebar-btn-color: #a89aae;
+  --nav-cursor-color: #c9a5bb;
+  
+  /* Avatar */
+  --avatar-border-color: rgba(230, 230, 230, 0.5);
+  
+  /* Topbar */
+  --topbar-bg: rgba(74, 40, 71, 0.95);
+  --topbar-text-color: #f5f1ed;
+  
+  /* Search */
+  --search-border-color: #8D5F8C;
+  --search-icon-color: #a89aae;
+  --input-focus-border-color: #c9a5bb;
+  
+  /* Post List */
+  --post-list-text-color: #f5f1ed;
+  
+  /* Pagination */
+  --btn-patinator-text-color: #f5f1ed;
+  --btn-paginator-hover-color: #4a2847;
+  
+  /* Table of Contents */
+  --toc-highlight: #c9a5bb;
+  --toc-popup-border-color: #8D5F8C;
+  
+  /* Tags */
+  --tag-hover: #8D5F8C;
+  
+  /* Tables */
+  --tb-odd-bg: #4a2847;
+  --tb-even-bg: #6B3F69;
+  --tb-border-color: #8D5F8C;
+  
+  /* Footnotes & Sharing */
+  --footnote-target-bg: #c9a5bb;
+  --btn-share-color: #a89aae;
+  --btn-share-hover-color: #f5f1ed;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* ===== ENHANCED STYLING WITH MAUVE & DUSTY ROSE ===== */
+
+/* Sidebar with mauve gradient */
+.sidebar {
+  background: linear-gradient(180deg, #8D5F8C 0%, #6B3F69 100%);
+  background-attachment: fixed;
+}
+
+/* Post containers with dusty rose accent */
+.post,
+.card {
+  border-left: 3px solid #DDC3C3;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-left-color: #e8d0d0;
+    box-shadow: inset 0 0 20px rgba(221, 195, 195, 0.1);
+  }
+}
+
+/* Links with dusty rose transitions */
+a {
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: #e8d0d0;
+  }
+}
+
+/* Code blocks with dusty rose accent */
+pre,
+code {
+  border-left: 3px solid #DDC3C3;
+}
+
+/* Blockquotes with dusty rose gradient */
+blockquote {
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, #DDC3C3, #e8d0d0, #d9b8b8) 1;
+  background: linear-gradient(90deg, rgba(221, 195, 195, 0.05), transparent);
+}
+
+/* Buttons with dusty rose gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #DDC3C3, #e8d0d0);
+  border-color: #DDC3C3;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, #e8d0d0, #f0d8d8);
+    border-color: #e8d0d0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(221, 195, 195, 0.4);
+  }
+}
+
+/* Tags with mauve hover */
+.tag,
+.category {
+  background: #A376A2;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, #8D5F8C, #DDC3C3);
+  }
+}
+
+/* Pagination active state with dusty rose */
+.pagination .active .page-link {
+  background: linear-gradient(135deg, #DDC3C3, #e8d0d0);
+  border-color: #DDC3C3;
+}
+
+/* Scrollbar styling with dusty rose */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #DDC3C3, #e8d0d0);
+  
+  &:hover {
+    background: linear-gradient(180deg, #e8d0d0, #f0d8d8);
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* ===== SIDEBAR REFINEMENT ===== */
+.sidebar {
+  border-radius: 0 15px 15px 0;
+}
+
+.nav-item {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#sidebar ul li.nav-item {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#sidebar ul li.nav-item a.nav-link {
+    border-radius: 0px;
+}
+
+.nav-link {
+  border-radius: 0px;
+  transition: all 0.3s ease;
+  padding: 1rem 1.5rem;
+  color: #b899b8;
+  
+  &:hover {
+    background: rgba(221, 195, 195, 0.1);
+    color: #DDC3C3;
+  }
+  
+  &.active {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, #5a4d63, #6B3F69);
+    color: #f5f1ed;
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 15px;
+    border: 2px solid #DDC3C3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ===== LINK HOVER EFFECTS ===== */
+a {
+  transition: color 0.2s ease;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
