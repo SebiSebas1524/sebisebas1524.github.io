@@ -9,40 +9,38 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: Europe/Amsterdam
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Sebastian Dăscălescu # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: Tools and Engine Programmer # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Personal Project website of Sebastian-Marian Dăscălescu - Tools and Engine Programmer.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: ""
 
 github:
-  username: github_username # change to your GitHub username
+  username: SebiSebas1524
 
-twitter:
-  username: twitter_username # change to your Twitter username
+itch:
+  username: sebisebas
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Sebastian-Marian Dăscălescu 
+  email:  business.sebastian1524@gmail.com 
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/SebiSebas1524
+    - https://www.linkedin.com/in/sebastian-d%C4%83sc%C4%83lescu-a53823253/
+    - https://sebisebas.itch.io/
 
 # Site Verification Settings
 webmaster_verifications:
@@ -88,7 +86,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: light # dark
+theme_mode: # dark
 
 
 # The CDN endpoint for media resources.
