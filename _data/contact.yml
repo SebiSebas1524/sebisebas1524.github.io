@@ -5,9 +5,11 @@
 
 - type: linkedin
   icon: "fa-brands fa-linkedin"
+  url:  'https://www.linkedin.com/in/sebastian-d%C4%83sc%C4%83lescu-a53823253/' 
 
 - type: itch
   icon: "fa-brands fa-itch-io"
+  url:  'https://sebisebas.itch.io/'
 
 - type: email
   icon: "fas fa-envelope"

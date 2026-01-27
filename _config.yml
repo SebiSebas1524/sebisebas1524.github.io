@@ -42,6 +42,9 @@ social:
     - https://www.linkedin.com/in/sebastian-d%C4%83sc%C4%83lescu-a53823253/
     - https://sebisebas.itch.io/
 
+linkedin:
+  username: sebastian-dăscălescu-a53823253
+
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
@@ -57,7 +60,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-SQL9Z9HN1J # Get it form here: 
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
