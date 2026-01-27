@@ -1,5 +1,6 @@
 ---
 layout: tags
-icon: fas fa-tags
+icon: fa-solid fa-rainbow
 order: 3
 ---
+
