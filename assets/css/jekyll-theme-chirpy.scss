@@ -456,3 +456,27 @@ a {
     opacity: 0.9;
   }
 }
+
+/* ===== CUSTOM AVATAR STYLING ===== */
+#sidebar {
+  .avatar {
+    width: 120px !important;
+    height: 120px !important;
+    
+    .rounded-circle{
+      border-radius: 0px !important; /* Rounded square - change to 50% for circle, 0 for square */
+    }
+
+    img {
+      width: 120px !important;
+      height: 120px !important;
+      border: 3px solid var(--avatar-border-color) !important;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+        border-color: var(--link-color);
+      }
+    }
+  }
+}
