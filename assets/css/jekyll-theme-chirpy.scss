@@ -459,17 +459,18 @@ a {
 
 /* ===== CUSTOM AVATAR STYLING ===== */
 #sidebar {
-  .avatar {
-    width: 120px !important;
-    height: 120px !important;
+  #avatar {
+    width: 180px !important;
+    height: 180px !important;
+    border-radius: 0px !important; /* Rounded square - change to 50% for circle, 0 for square */
     
     .rounded-circle{
       border-radius: 0px !important; /* Rounded square - change to 50% for circle, 0 for square */
     }
 
     img {
-      width: 120px !important;
-      height: 120px !important;
+      width: 180px !important;
+      height: 180px !important;
       border: 3px solid var(--avatar-border-color) !important;
       transition: all 0.3s ease;
       
