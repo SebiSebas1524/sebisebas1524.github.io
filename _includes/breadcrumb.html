@@ -1,0 +1,52 @@
+<!-- breadcrumb -->
+<nav id="breadcrumb" aria-label="Breadcrumb">
+  {% if page.url == '/' %}
+    <!-- Homepage: just show Home -->
+    <span>Home</span>
+  {% elsif page.url == '/about/' %}
+    <!-- About page -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    <span>About</span>
+  {% elsif page.url == '/projects/' %}
+    <!-- Projects page -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    <span>Projects</span>
+  {% elsif page.url == '/other/' %}
+    <!-- Other Articles page -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    <span>Other Articles</span>
+  {% elsif page.layout == 'post' %}
+    <!-- Blog post page -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    <span>
+      <a href="/other/">Other Articles</a>
+    </span>
+    <span>{{ page.title }}</span>
+  {% elsif page.collection == 'projects' %}
+    <!-- Project page -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    <span>
+      <a href="/projects/">Projects</a>
+    </span>
+    <span>{{ page.title }}</span>
+  {% else %}
+    <!-- Fallback -->
+    <span>
+      <a href="/">Home</a>
+    </span>
+    {% if page.title %}
+      <span>{{ page.title }}</span>
+    {% endif %}
+  {% endif %}
+</nav>
+<!-- endof #breadcrumb -->

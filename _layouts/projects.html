@@ -1,0 +1,72 @@
+---
+layout: page
+---
+
+{% include lang.html %}
+
+<!-- All Projects -->
+{% assign all_projects = site.projects %}
+
+<div id="post-list" class="flex-grow-1 px-xl-1">
+  {% if all_projects.size > 0 %}
+    {% for project in all_projects %}
+      <article class="card-wrapper card mb-4">
+        <a href="{{ project.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
+          {% assign card_body_col = '12' %}
+
+          {% if project.image %}
+            {% assign src = project.image | default: project.image %}
+
+            {% if project.media_subpath %}
+              {% unless src contains '://' %}
+                {% assign src = project.media_subpath
+                  | append: '/'
+                  | append: src
+                  | replace: '///', '/'
+                  | replace: '//', '/'
+                %}
+              {% endunless %}
+            {% endif %}
+
+            {% assign alt = project.image.alt | xml_escape | default: 'Project Image' %}
+
+            <div class="col-md-5">
+              <img src="{{ src }}" alt="{{ alt }}" class="rounded">
+            </div>
+
+            {% assign card_body_col = '7' %}
+          {% endif %}
+
+          <div class="col-md-{{ card_body_col }}">
+            <div class="card-body d-flex flex-column">
+              <h1 class="card-title my-2 mt-md-0">{{ project.title }}</h1>
+
+              <div class="card-text content mt-0 mb-3">
+                <p>{{ project.description }}</p>
+              </div>
+
+              <div class="post-meta flex-grow-1 d-flex align-items-end">
+                <div class="me-auto">
+                  <!-- project metadata -->
+                  {% if project.main_category %}
+                    <i class="far fa-folder-open fa-fw me-1"></i>
+                    <span class="categories">{{ project.main_category }}</span>
+                  {% endif %}
+
+                  {% if project.engine %}
+                    <i class="fas fa-cogs fa-fw me-1 ms-2"></i>
+                    <span>{{ project.engine }}</span>
+                  {% endif %}
+                </div>
+              </div>
+              <!-- .post-meta -->
+            </div>
+            <!-- .card-body -->
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p class="text-center mt-5">No projects available yet.</p>
+  {% endif %}
+</div>
