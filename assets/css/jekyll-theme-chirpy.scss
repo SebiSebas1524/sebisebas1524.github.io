@@ -481,3 +481,14 @@ a {
     }
   }
 }
+
+/* Hide the right panel and use full width for content */
+#panel-wrapper {
+  display: none !important;
+}
+
+#main-wrapper .row > main,
+#main-wrapper .row > #tail-wrapper {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
