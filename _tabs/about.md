@@ -36,4 +36,4 @@ order: 3
 - Email: [business.sebastin1524@gmail.com](business.sebastin1524@gmail.com)
 - GitHub: [github.com/SebiSebas1524](https://github.com/SebiSebas1524)
 - LinkedIn: [linkedin.com/in/sebastian-dăscălescu/](www.linkedin.com/in/sebastian-dăscălescu)
-- <a class="btn btn-outline-primary btn-sm mb-2 resume-btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+- <a class="btn btn-outline-primary btn-sm mb-2 resume-btn" href="/assets/SebastianDascalescuResume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
