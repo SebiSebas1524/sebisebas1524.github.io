@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: project
 title: Work in progress
 description: I am working on a project that will be released on Steam
@@ -46,4 +46,4 @@ date: 2026-01-01
   {% if page.date %}
     <span><strong>Date:</strong> {{ page.date | date: "%B %Y" }}</span>
   {% endif %}
-</div>
+</div> -->
