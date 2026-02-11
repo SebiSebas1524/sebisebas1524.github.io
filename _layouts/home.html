@@ -6,6 +6,106 @@ layout: default
 
 <!-- Projects Section -->
 <div id="projects-section" class="mb-5">
+  <section class="home-about mb-4">
+    <h2 class="mb-3">Hello there</h2>
+    <p class="home-about__text">Hello, I'm Sebastian Dascalescu, a games programmer studying at Breda University of Applied Sciences, specializing in engine and tools development. I enjoy building tools that speed up team workflows. My experience spans custom C++ engines, Unreal, and Godot. I love collaborating with teams to achieve shared goals.</p>
+    <p class="home-about__text">In my free time, I play games, juggle with fire 🔥, listen to music, and explore small creative projects to learn new skills, both technical and non-technical.</p>
+    <p class="home-about__text"><strong>I'm looking for an internship starting September 2026.</strong></p>
+  </section>
+  <section class="home-skills mb-5" aria-label="Skills and tools">
+    <div class="home-skill-list">
+      <span class="home-skill-icon" title="Unreal Engine" aria-label="Unreal Engine">
+        <div class="preview-img">
+          <img src="/assets/img/icons/UE.svg" alt="Unreal Engine" loading="lazy">
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>Unreal Engine</strong>
+          <span>Gameplay systems and tools in C++ and Blueprints, from personal to large group projects.</span>
+        </span>
+      </span>
+      <span class="home-skill-icon" title="C++" aria-label="C++">
+        <div class="preview-img">
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+          
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>C++</strong>
+          <span>5+ years creating custom engines and tools from scratch, with a focus on modern C++.</span>
+        </span>
+      </span>
+      <span class="home-skill-icon" title="Python" aria-label="Python">
+        <div class="preview-img">
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>Python</strong>
+          <span>Automation, CI/CD build scripts, and gameplay tooling, plugin for Blender.</span>
+        </span>
+      </span>
+      <span class="home-skill-icon" title="GitHub" aria-label="GitHub">
+        <div class="preview-img">
+          <img src="/assets/img/icons/github.svg" alt="GitHub" loading="lazy">
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>GitHub</strong>
+          <span>Source control, code reviews, and GitHub Actions for CI/CD.</span>
+        </span>
+      </span>
+      <span class="home-skill-icon" title="Perforce" aria-label="Perforce">
+        <div class="preview-img">
+          <img src="/assets/img/icons/perforce.svg" alt="Perforce" loading="lazy">
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>Perforce</strong>
+          <span>3 years using P4 and P4V in team environments, including Swarm code reviews.</span>
+        </span>
+      </span>
+      <span class="home-skill-icon" title="Jenkins" aria-label="Jenkins">
+        <div class="preview-img">
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
+          
+        </div>
+        <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+          <strong>Jenkins</strong>
+          <span>CI pipelines for automated builds and deployments.</span>
+        </span>
+      </span>
+        <span class="home-skill-icon" title="Godot" aria-label="Godot">
+          <div class="preview-img">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" />
+          
+          </div>
+          <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+            <strong>Godot</strong>
+            <span>Gameplay prototypes and tools using GDScript and C#.</span>
+          </span>
+        </span>
+        <span class="home-skill-icon" title="Visual Studio" aria-label="Visual Studio">
+          <div class="preview-img">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" />
+          </div>
+          <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+            <strong>Visual Studio</strong>
+            <span>C++ development, debugging, and profiling for engine and tools work.</span>
+          </span>
+        </span>
+        <span class="home-skill-icon" title="Visual Studio Code" aria-label="Visual Studio Code">
+          <div class="preview-img">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+          </div>
+          <span class="home-skill-tooltip" style="--tooltip-shift: 0px;">
+            <strong>Visual Studio Code</strong>
+            <span>Scripting, tooling, and workflow customization with extensions and tasks.</span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </section>
   <h2 class="mb-4">Latest Projects</h2>
   {% assign sorted_projects = site.projects
     | where_exp: 'item', 'item.tags contains "featured"'

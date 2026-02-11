@@ -1,0 +1,68 @@
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+      <img src="{{ site.avatar }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+    </a>
+
+    <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    <a class="btn btn-outline-primary btn-sm mt-2 resume-btn" href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <li class="nav-item{% if page.url == '/' %} active{% endif %}">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+
+      {% assign tabs = site.tabs | sort: 'order' %}
+      {% for tab in tabs %}
+        {% if tab.hidden != true %}
+          <li class="nav-item{% if page.url == tab.url %} active{% endif %}">
+            <a href="{{ tab.url | relative_url }}" class="nav-link">
+              <i class="fa-fw {{ tab.icon }}"></i>
+              <span>{{ tab.title | upcase }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+    <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+      <i class="fas fa-adjust"></i>
+    </button>
+    <span class="icon-border"></span>
+
+    {% for link in site.social.links %}
+      {% assign icon_class = 'fas fa-link' %}
+      {% if link contains 'github.com' %}
+        {% assign icon_class = 'fab fa-github' %}
+      {% elsif link contains 'linkedin.com' %}
+        {% assign icon_class = 'fa-brands fa-linkedin' %}
+      {% elsif link contains 'itch.io' %}
+        {% assign icon_class = 'fa-brands fa-itch-io' %}
+      {% endif %}
+      <a href="{{ link }}" aria-label="{{ icon_class | split: ' ' | last | replace: 'fa-', '' }}" target="_blank" rel="noopener noreferrer">
+        <i class="{{ icon_class }}"></i>
+      </a>
+    {% endfor %}
+
+    {% if site.social.email %}
+      {% assign email_parts = site.social.email | split: '@' %}
+      <a
+        href="javascript:location.href='mailto:' + ['{{ email_parts[0] }}','{{ email_parts[1] }}'].join('@')"
+        aria-label="email"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+    {% endif %}
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->

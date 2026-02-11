@@ -1,14 +1,14 @@
 ---
 layout: project
 title: Work in progress
-description: TBA
+description: I am working on a project that will be released on Steam
 image: /assets/vid/y3/wip.jpg
 hide_image: true
 hide_meta: true
 tags:
-  - TBA
+  - unreal
 team_size: Big Team
-duration: 2 Weeks
+duration: 24 Weeks
 contributions:
   - TBA
 main_category: University Projects

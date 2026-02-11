@@ -677,3 +677,156 @@ a {
 .project-card__list li {
   margin-bottom: 0.25rem;
 }
+
+/* Home skills list */
+.home-skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  gap: 0.75rem 0.9rem;
+  align-items: center;
+}
+
+.home-skill-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-skill-icon:hover,
+.home-skill-icon:focus-within {
+  transform: translateY(-2px);
+  border-color: var(--link-underline-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.home-skill-icon .preview-img {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+
+.home-skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-skill-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.6rem);
+  transform: translateX(-50%) translateX(var(--tooltip-shift, 0px));
+  width: min(260px, 75vw);
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  color: var(--text-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 3;
+}
+
+.home-skill-tooltip strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.home-skill-tooltip span {
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+  line-height: 1.4;
+}
+
+.home-skill-icon:hover .home-skill-tooltip,
+.home-skill-icon:focus-within .home-skill-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateX(var(--tooltip-shift, 0px)) translateY(-4px);
+}
+
+/* Home intro text sizing */
+.home-about__text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 992px) {
+  .home-about__text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Education timeline */
+.education-timeline {
+  margin: 2rem 0 2.5rem;
+}
+
+.education-timeline__list {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--main-border-color);
+}
+
+.education-timeline__item {
+  position: relative;
+  padding: 0.25rem 0 1rem;
+}
+
+.education-timeline__marker {
+  position: absolute;
+  left: -0.75rem;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: var(--main-bg);
+  border: 2px solid var(--link-underline-color);
+  box-shadow: 0 0 0 3px var(--main-bg);
+}
+
+.education-timeline__content {
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.education-timeline__date {
+  font-size: 0.9rem;
+  color: var(--text-muted-color);
+  margin-bottom: 0.35rem;
+}
+
+.education-timeline__school {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.education-timeline__program {
+  color: var(--text-muted-color);
+}
+
+/* Resume button styling */
+.resume-btn {
+  border-color: var(--text-muted-color);
+  color: var(--text-muted-color);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+  color: var(--text-color);
+  border-color: var(--link-underline-color);
+  background: var(--card-bg);
+}
