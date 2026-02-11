@@ -7,43 +7,98 @@ layout: default
 <!-- Projects Section -->
 <div id="projects-section" class="mb-5">
   <h2 class="mb-4">Latest Projects</h2>
-  {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-  {% if sorted_projects.size > 0 %}
-    <div class="row">
-      {% for project in sorted_projects limit:3 %}
-        <div class="col-md-12 mb-4">
-          <article class="card">
-            <a href="{{ project.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-              {% assign card_body_col = '12' %}
-              
-              {% if project.image %}
-                <div class="col-md-5">
-                  <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="rounded">
-                </div>
-                {% assign card_body_col = '7' %}
+  {% assign sorted_projects = site.projects
+    | where_exp: 'item', 'item.tags contains "featured"'
+    | sort: 'date'
+    | reverse
+  %}
+  <div id="post-list" class="flex-grow-1 px-0 projects-grid projects-grid--home">
+    {% if sorted_projects.size > 0 %}
+      {% for project in sorted_projects limit:4 %}
+        <article class="project-card">
+          <a href="{{ project.url | relative_url }}" class="project-card__link">
+            {% assign show_image = false %}
+            {% if project.image and project.image != 'tba' %}
+              {% assign show_image = true %}
+            {% endif %}
+
+            {% if show_image %}
+              {% assign src = project.image | default: project.image %}
+
+              {% if project.media_subpath %}
+                {% unless src contains '://' %}
+                  {% assign src = project.media_subpath
+                    | append: '/'
+                    | append: src
+                    | replace: '///', '/'
+                    | replace: '//', '/'
+                  %}
+                {% endunless %}
               {% endif %}
-              
-              <div class="col-md-{{ card_body_col }}">
-                <div class="card-body">
-                  <h3 class="card-title">{{ project.title }}</h3>
-                  <p class="card-text">{{ project.description }}</p>
-                  <div class="project-meta text-muted small">
-                    {% if project.engine %}<span class="me-3"><strong>Engine:</strong> {{ project.engine }}</span>{% endif %}
-                    {% if project.platform %}<span class="me-3"><strong>Platform:</strong> {{ project.platform }}</span>{% endif %}
-                    {% if project.duration %}<span><strong>Duration:</strong> {{ project.duration }}</span>{% endif %}
-                  </div>
-                </div>
+
+              {% assign alt = project.image_alt | xml_escape | default: project.title %}
+              <div class="project-card__media">
+                <img src="{{ src }}" alt="{{ alt }}" class="project-card__image">
               </div>
-            </a>
-          </article>
-        </div>
+            {% else %}
+              <div class="project-card__media project-card__media--empty"></div>
+            {% endif %}
+
+            <div class="project-card__body">
+              {% if project.tags %}
+                <div class="project-card__tags">
+                  {% for tag in project.tags %}
+                    {% unless tag == "featured" %}
+                      <span class="project-tag">{{ tag }}</span>
+                    {% endunless %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <h2 class="project-card__title">{{ project.title }}</h2>
+
+              {% if project.description %}
+                <p class="project-card__description">{{ project.description }}</p>
+              {% endif %}
+
+              <div class="project-card__meta">
+                {% if project.team_size %}
+                  <div class="project-card__meta-item">
+                    <span class="project-card__meta-label">Team</span>
+                    <span class="project-card__meta-value">{{ project.team_size }}</span>
+                  </div>
+                {% endif %}
+
+                {% if project.duration %}
+                  <div class="project-card__meta-item">
+                    <span class="project-card__meta-label">Duration</span>
+                    <span class="project-card__meta-value">{{ project.duration }}</span>
+                  </div>
+                {% endif %}
+              </div>
+
+              {% if project.contributions %}
+                <div class="project-card__list">
+                  <span class="project-card__list-title">Key responsibilities</span>
+                  <ul>
+                    {% for item in project.contributions %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        </article>
       {% endfor %}
-    </div>
-    <div class="text-center mb-5">
+    {% else %}
+      <p>No projects yet.</p>
+    {% endif %}
+  </div>
+  {% if sorted_projects.size > 0 %}
+    <div class="text-center mt-4">
       <a href="/projects/" class="btn btn-outline-primary">View All Projects</a>
     </div>
-  {% else %}
-    <p>No projects yet.</p>
   {% endif %}
 </div>
 

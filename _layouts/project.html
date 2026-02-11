@@ -8,32 +8,34 @@ layout: default
   <header>
     <h1 class="dynamic-title">{{ page.title }}</h1>
     
-    {% if page.image %}
+    {% if page.image and page.hide_image != true %}
       <div class="project-image">
         <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" />
       </div>
     {% endif %}
     
-    <div class="project-meta">
-      {% if page.main_category %}
-        <span class="category">{{ page.main_category }}</span>
-      {% endif %}
-      {% if page.engine %}
-        <span><strong>Engine:</strong> {{ page.engine }}</span>
-      {% endif %}
-      {% if page.platform %}
-        <span><strong>Platform:</strong> {{ page.platform }}</span>
-      {% endif %}
-      {% if page.team_size %}
-        <span><strong>Team Size:</strong> {{ page.team_size }}</span>
-      {% endif %}
-      {% if page.duration %}
-        <span><strong>Duration:</strong> {{ page.duration }}</span>
-      {% endif %}
-      {% if page.date %}
-        <span><strong>Date:</strong> {{ page.date | date: "%B %Y" }}</span>
-      {% endif %}
-    </div>
+    {% unless page.hide_meta %}
+      <div class="project-meta">
+        {% if page.main_category %}
+          <span class="category">{{ page.main_category }}</span>
+        {% endif %}
+        {% if page.engine %}
+          <span><strong>Engine:</strong> {{ page.engine }}</span>
+        {% endif %}
+        {% if page.platform %}
+          <span><strong>Platform:</strong> {{ page.platform }}</span>
+        {% endif %}
+        {% if page.team_size %}
+          <span><strong>Team Size:</strong> {{ page.team_size }}</span>
+        {% endif %}
+        {% if page.duration %}
+          <span><strong>Duration:</strong> {{ page.duration }}</span>
+        {% endif %}
+        {% if page.date %}
+          <span><strong>Date:</strong> {{ page.date | date: "%B %Y" }}</span>
+        {% endif %}
+      </div>
+    {% endunless %}
     
     {% if page.description %}
       <p class="lead">{{ page.description }}</p>

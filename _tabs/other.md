@@ -1,7 +1,7 @@
 ---
 layout: posts
 icon: fa-solid fa-rainbow
-order: 3
+order: 2
 title: Other Articles
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: projects
 icon: fa-solid fa-laptop-code
-order: 2
+order: 1
 title: Projects
 ---
