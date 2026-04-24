@@ -3,7 +3,7 @@ layout: project
 title: Level Streaming in C++
 description: I developed a dynamic level streaming system for the Bee engine (CMGT Engine) that asynchronously loads and unloads GLTF models based on player proximity and camera frustum culling. I implemented multithreaded loading using std::promise and std::future, created debug visualization tools including a minimap and memory profiler, and optimized the system through performance profiling.
 image: /assets/vid/y2b/prev.gif
-hide_image: true
+hide_image: truew
 hide_meta: true
 tags:
   - C++
