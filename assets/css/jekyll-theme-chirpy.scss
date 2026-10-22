@@ -506,10 +506,8 @@ a {
       width: 180px !important;
       height: 180px !important;
       border: 3px solid var(--avatar-border-color) !important;
-      transition: all 0.3s ease;
       
       &:hover {
-        transform: scale(1.05);
         border-color: var(--link-color);
       }
     }
@@ -1113,13 +1111,12 @@ article > header,
 .project-card__image,
 .project-image img,
 .post-preview img {
-  transition: transform 0.35s ease;
+  transition: none;
 }
 
-.project-card:hover .project-card__image,
-.project-image:hover img,
-.card:hover .post-preview img {
-  transform: scale(1.03);
+.shimmer::before {
+  display: none;
+  animation: none;
 }
 
 .home-skill-list {
