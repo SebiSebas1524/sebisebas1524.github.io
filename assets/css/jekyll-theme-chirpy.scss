@@ -22,7 +22,8 @@ $gradient-accent: linear-gradient(45deg, #b7d477, #cce694, #a4ca62);
 
 /* ===== DARK THEME COLOR SCHEME ===== */
 html:not([data-mode]),
-html[data-mode=dark] {
+html[data-mode=dark],
+html[data-bs-theme=dark] {
   /* Framework Colors */
   --main-bg: #182719;
   --mask-bg: #294423;
@@ -116,7 +117,8 @@ html[data-mode=dark] {
 /// ///////////////////////////////////////////////////////////////
 
 /* ===== LIGHT THEME COLOR SCHEME ===== */
-html[data-mode=light] {
+html[data-mode=light],
+html[data-bs-theme=light] {
   /* Framework Colors */
   --main-bg: #f4f6ed;
   --mask-bg: #e7eedc;
@@ -211,7 +213,8 @@ body {
 }
 
 html:not([data-mode]),
-html[data-mode=dark] {
+html[data-mode=dark],
+html[data-bs-theme=dark] {
   body {
     background-color: #182719;
     background-image:
@@ -225,7 +228,8 @@ html[data-mode=dark] {
   }
 }
 
-html[data-mode=light] {
+html[data-mode=light],
+html[data-bs-theme=light] {
   body {
     background-color: #f4f6ed;
     background-image:
@@ -245,7 +249,8 @@ html[data-mode=light] {
 
 /* Sidebar with olive gradient */
 html:not([data-mode]),
-html[data-mode=dark] {
+html[data-mode=dark],
+html[data-bs-theme=dark] {
   .sidebar {
     background: linear-gradient(180deg, #4a6b2d 0%, #1f2a1c 100%);
     background-attachment: fixed;
@@ -317,7 +322,8 @@ html[data-mode=dark] {
   }
 }
 
-html[data-mode=light] {
+html[data-mode=light],
+html[data-bs-theme=light] {
   .sidebar {
     background: linear-gradient(180deg, #d8e2c5 0%, #f7faf2 100%);
     background-attachment: fixed;
@@ -430,7 +436,8 @@ a {
 }
 
 html:not([data-mode]),
-html[data-mode=dark] {
+html[data-mode=dark],
+html[data-bs-theme=dark] {
   .nav-link {
     color: #b8c08f;
     
@@ -456,7 +463,8 @@ html[data-mode=dark] {
   }
 }
 
-html[data-mode=light] {
+html[data-mode=light],
+html[data-bs-theme=light] {
   .nav-link {
     color: #3d4a2f;
     
@@ -914,7 +922,8 @@ html {
 }
 
 html:not([data-mode]),
-html[data-mode='dark'] {
+html[data-mode='dark'],
+html[data-bs-theme='dark'] {
   --brand-primary: #9ec26b;
   --brand-secondary: #d4b483;
   --brand-surface: #1d2418;
@@ -923,7 +932,8 @@ html[data-mode='dark'] {
   --brand-shadow: rgba(0, 0, 0, 0.42);
 }
 
-html[data-mode='light'] {
+html[data-mode='light'],
+html[data-bs-theme='light'] {
   --brand-primary: #557a2f;
   --brand-secondary: #9b6f3e;
   --brand-surface: #f6f2e8;
