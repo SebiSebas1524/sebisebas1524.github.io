@@ -244,3 +244,12 @@ layout: default
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}
+
+<!-- Chirpy's home script expects the TOC popup elements on every home page. -->
+<div id="toc-bar" class="d-none" aria-hidden="true">
+  <button id="toc-solo-trigger" type="button" aria-hidden="true" tabindex="-1"></button>
+</div>
+<dialog id="toc-popup" class="d-none" aria-hidden="true">
+  <button id="toc-popup-close" type="button" aria-hidden="true" tabindex="-1"></button>
+  <div id="toc-popup-content"></div>
+</dialog>
