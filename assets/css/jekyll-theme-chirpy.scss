@@ -9,24 +9,24 @@
 ';
 
 /* ===== COLOR PALETTE VARIABLES ===== */
-$deep-olive: #1f2a1c;
-$forest-olive: #2b3a24;
-$mid-olive: #3f5234;
-$accent-olive: #b7c77a;
-$bright-olive: #c9d892;
+$deep-olive: #182719;
+$forest-olive: #294423;
+$mid-olive: #3d5a31;
+$accent-olive: #b7d477;
+$bright-olive: #cce694;
 
 /* Gradients - OLIVE & FOREST FOCUSED */
-$gradient-main: linear-gradient(135deg, #1f2a1c 0%, #2b3a24 25%, #4a6b2d 50%, #2b3a24 75%, #1f2a1c 100%);
-$gradient-subtle: linear-gradient(90deg, #2b3a24, #4a6b2d);
-$gradient-accent: linear-gradient(45deg, #b7c77a, #c9d892, #9fbf5f);
+$gradient-main: linear-gradient(135deg, #182719 0%, #294423 25%, #527c35 50%, #294423 75%, #182719 100%);
+$gradient-subtle: linear-gradient(90deg, #294423, #527c35);
+$gradient-accent: linear-gradient(45deg, #b7d477, #cce694, #a4ca62);
 
 /* ===== DARK THEME COLOR SCHEME ===== */
 html:not([data-mode]),
 html[data-mode=dark] {
   /* Framework Colors */
-  --main-bg: #1f2a1c;
-  --mask-bg: #2b3a24;
-  --main-border-color: #3f5234;
+  --main-bg: #182719;
+  --mask-bg: #294423;
+  --main-border-color: #3d5a31;
   
   /* Text Colors */
   --text-color: #e8f0e0;
@@ -36,28 +36,28 @@ html[data-mode=dark] {
   --label-color: #9fb09a;
   
   /* Links & Quotes */
-  --blockquote-border-color: #b7c77a;
+  --blockquote-border-color: #b7d477;
   --blockquote-text-color: #9fb09a;
-  --link-color: #b7c77a;
+  --link-color: #b7d477;
   --link-underline-color: #d7e6a2;
   
   /* Buttons */
-  --button-bg: #2b3a24;
-  --btn-border-color: #3f5234;
+  --button-bg: #294423;
+  --btn-border-color: #3d5a31;
   --btn-backtotop-color: #e8f0e0;
-  --btn-backtotop-border-color: #3f5234;
+  --btn-backtotop-border-color: #3d5a31;
   --btn-box-shadow: rgba(194, 211, 122, 0.15);
   
   /* Cards & Headers */
-  --card-header-bg: #2b3a24;
-  --card-bg: #1f2a1c;
+  --card-header-bg: #294423;
+  --card-bg: #243b20;
   
   /* Checkboxes */
-  --checkbox-color: #3f5234;
-  --checkbox-checked-color: #b7c77a;
+  --checkbox-color: #3d5a31;
+  --checkbox-checked-color: #b7d477;
   
   /* Images & Gradients */
-  --img-bg: radial-gradient(circle, #1f2a1c 0%, #2b3a24 100%);
+  --img-bg: radial-gradient(circle, #182719 0%, #294423 100%);
   --shimmer-bg: linear-gradient(90deg, rgba(194, 211, 122, 0) 0%, rgba(194, 211, 122, 0.2) 50%, rgba(194, 211, 122, 0) 100%);
   
   /* Site Title & Branding */
@@ -65,14 +65,14 @@ html[data-mode=dark] {
   --site-subtitle-color: #9fb09a;
   
   /* Sidebar */
-  --sidebar-bg: #2b3a24;
-  --sidebar-border-color: #3f5234;
+  --sidebar-bg: #203a1d;
+  --sidebar-border-color: #3d5a31;
   --sidebar-muted-color: #9fb09a;
   --sidebar-active-color: #e8f0e0;
-  --sidebar-hover-bg: #1f2a1c;
-  --sidebar-btn-bg: #1f2a1c;
+  --sidebar-hover-bg: #182719;
+  --sidebar-btn-bg: #182719;
   --sidebar-btn-color: #9fb09a;
-  --nav-cursor-color: #b7c77a;
+  --nav-cursor-color: #b7d477;
   
   /* Avatar */
   --avatar-border-color: rgba(210, 220, 200, 0.4);
@@ -82,31 +82,31 @@ html[data-mode=dark] {
   --topbar-text-color: #e8f0e0;
   
   /* Search */
-  --search-border-color: #3f5234;
+  --search-border-color: #3d5a31;
   --search-icon-color: #9fb09a;
-  --input-focus-border-color: #b7c77a;
+  --input-focus-border-color: #b7d477;
   
   /* Post List */
   --post-list-text-color: #e8f0e0;
   
   /* Pagination */
   --btn-patinator-text-color: #e8f0e0;
-  --btn-paginator-hover-color: #1f2a1c;
+  --btn-paginator-hover-color: #182719;
   
   /* Table of Contents */
-  --toc-highlight: #b7c77a;
-  --toc-popup-border-color: #3f5234;
+  --toc-highlight: #b7d477;
+  --toc-popup-border-color: #3d5a31;
   
   /* Tags */
-  --tag-hover: #3f5234;
+  --tag-hover: #3d5a31;
   
   /* Tables */
-  --tb-odd-bg: #1f2a1c;
-  --tb-even-bg: #2b3a24;
-  --tb-border-color: #3f5234;
+  --tb-odd-bg: #182719;
+  --tb-even-bg: #294423;
+  --tb-border-color: #3d5a31;
   
   /* Footnotes & Sharing */
-  --footnote-target-bg: #b7c77a;
+  --footnote-target-bg: #b7d477;
   --btn-share-color: #9fb09a;
   --btn-share-hover-color: #e8f0e0;
 }
@@ -213,7 +213,7 @@ body {
 html:not([data-mode]),
 html[data-mode=dark] {
   body {
-    background-color: #1f2a1c;
+    background-color: #182719;
     background-image:
       radial-gradient(circle at top left, rgba(183, 199, 122, 0.18), transparent 28%),
       radial-gradient(circle at top right, rgba(74, 107, 45, 0.2), transparent 30%),
